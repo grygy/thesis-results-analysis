@@ -18,25 +18,31 @@ def plot_ratings(data, title, filename, suffix=''):
     sns.countplot(ax=axes[0],
                   x=data['How would you rate the overall clarity of the explanations provided in the exercises?'],
                   order=clarity_order)
-    axes[0].set_title('Clarity of Explanations' + suffix)
-    axes[0].set_xlabel('Rating')
-    axes[0].set_ylabel('Count')
-    axes[0].tick_params(axis='x', rotation=45)
+    axes[0].set_title('Clarity of Explanations' + suffix, fontsize=16)
+    axes[0].set_xlabel('Rating', fontsize=14)
+    axes[0].set_ylabel('Count', fontsize=14)
+    axes[0].set_ylim(0, 15)
+    axes[0].tick_params(axis='x', rotation=45, labelsize=14)
+    axes[0].tick_params(axis='y', labelsize=14)
 
     sns.countplot(ax=axes[1],
                   x=data['How would you rate the overall clarity of the instructions provided in the exercises?'],
                   order=clarity_order)
-    axes[1].set_title('Clarity of Instructions' + suffix)
-    axes[1].set_xlabel('Rating')
-    axes[1].set_ylabel('Count')
-    axes[1].tick_params(axis='x', rotation=45)
+    axes[1].set_title('Clarity of Instructions' + suffix, fontsize=16)
+    axes[1].set_xlabel('Rating', fontsize=14)
+    axes[1].set_ylabel('Count', fontsize=14)
+    axes[1].set_ylim(0, 15)
+    axes[1].tick_params(axis='x', rotation=45, labelsize=14)
+    axes[1].tick_params(axis='y', labelsize=14)
 
     sns.countplot(ax=axes[2], x=data['How would you rate the difficulty level of the exercises?'],
                   order=difficulty_order)
-    axes[2].set_title('Difficulty Level' + suffix)
-    axes[2].set_xlabel('Rating')
-    axes[2].set_ylabel('Count')
-    axes[2].tick_params(axis='x', rotation=45)
+    axes[2].set_title('Difficulty Level' + suffix, fontsize=16)
+    axes[2].set_xlabel('Rating', fontsize=14)
+    axes[2].set_ylabel('Count', fontsize=14)
+    axes[2].set_ylim(0, 10)
+    axes[2].tick_params(axis='x', rotation=45, labelsize=14)
+    axes[2].tick_params(axis='y', labelsize=14)
 
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 
